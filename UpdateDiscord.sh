@@ -6,3 +6,6 @@ sleep 10s
 
 # Rename it to a dot deb
 mv stable?platform=linux discord.deb
+
+# Install, will require root or sudo
+dpkg -i discord.deb
