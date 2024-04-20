@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Get the most recent Stable Release
 wget https://discord.com/api/download/stable?platform=linux&format=deb
 
