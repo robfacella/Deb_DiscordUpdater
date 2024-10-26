@@ -1,20 +1,17 @@
 #!/bin/bash
 
 # Get the most recent Stable Release
-wget https://discord.com/api/download/stable?platform=linux&format=deb
+wget "https://discord.com/api/download/stable?platform=linux&format=deb"
 
 # Debug Msg
 echo "Downloaded.."
-# Currently Prints before wget's download completes,
-# Pause for DL, might be wholly unecessary
-sleep 5s
-# if there's a way to freeze execution specifically until wget completes its download
+# Sleep not needed. Just needed to enclose file and URL pathing in quotes; the '&' was being taken literally
 
 # Debug Msg
 echo "Installing.."
 
-# Rename it to a dot deb
-mv stable?platform=linux discord.deb
+# Rename it to a dot deb. Same, enclose with quotes for '&' sanity
+mv "stable?platform=linux&format=deb" "discord.deb"
 
 # Install, will require root or sudo
 dpkg -i discord.deb
